@@ -36,8 +36,10 @@ namespace HoloLensFrontend
             string s = "HalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHallo";
             s += "123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689123456891234568912345689";
             s += "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
-            byte[] byteArray = ASCIIEncoding.ASCII.GetBytes(s);
+            string input = inputBox.Text;
+            byte[] byteArray = ASCIIEncoding.ASCII.GetBytes(input);
             networkStream.Write(byteArray);
+            
 
 
         }
@@ -62,10 +64,22 @@ namespace HoloLensFrontend
                     else
                         count = 0;
                 }
-                Dispatcher.Invoke(()=> { Debug.WriteLine(msg); });
+                Debug.WriteLine(msg);
+                Dispatcher.Invoke(() => { messageText.Text = msg; });
+                
+                
             }
 
         }
 
+        private void inputBox_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void messageText_Initialized(object sender, EventArgs e)
+        {
+
+        }
     }
 }
