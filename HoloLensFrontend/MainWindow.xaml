@@ -5,8 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HoloLensFrontend"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="800" Width="1280">
+    <Button x:Name="sendButton" Content="Button" HorizontalAlignment="Left" Height="25" Margin="375,190,0,0" VerticalAlignment="Top" Width="83" Click="sendButton_Click"/>
 </Window>

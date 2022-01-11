@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Net.Sockets;
 
 namespace HoloLensFrontend
 {
@@ -23,6 +24,15 @@ namespace HoloLensFrontend
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void sendButton_Click(object sender, RoutedEventArgs e)
+        {
+            TcpClient tcpClient = new TcpClient("172.22.100.151", 12021);
+            NetworkStream networkStream = tcpClient.GetStream();
+            string s = "Hallo";
+            byte[] byteArray = ASCIIEncoding.ASCII.GetBytes(s);
+            networkStream.Write(byteArray);
         }
     }
 }
