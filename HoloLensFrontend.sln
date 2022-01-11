@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloLensFrontend", "HoloLensFrontend\HoloLensFrontend.csproj", "{C9632976-E8E4-449D-B247-EDB46798892E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9632976-E8E4-449D-B247-EDB46798892E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9632976-E8E4-449D-B247-EDB46798892E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9632976-E8E4-449D-B247-EDB46798892E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9632976-E8E4-449D-B247-EDB46798892E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B2D06B1-1CAB-4D2B-AA03-33A822A45894}
+	EndGlobalSection
+EndGlobal
