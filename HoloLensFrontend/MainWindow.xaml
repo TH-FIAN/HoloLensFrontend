@@ -5,15 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HoloLensFrontend"
         mc:Ignorable="d"
-        Title="MainWindow" Height="332" Width="550">
+        Title="MainWindow" Height="831" Width="1192">
     <Grid Margin="0,0,34,11">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="31*"/>
             <ColumnDefinition Width="461*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="inputBox" HorizontalAlignment="Center" Height="49" Margin="0,94,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Initialized="inputBox_Initialized" Grid.Column="1" FontSize="30"/>
-        <Button Content="Send" HorizontalAlignment="Center" Margin="0,165,0,0" VerticalAlignment="Top" Click="sendButton_Click" Grid.Column="1" Width="123" Height="54" FontSize="30"/>
-        <TextBlock x:Name="messageText" HorizontalAlignment="Center" Margin="0,10,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.161,-0.306" Initialized="messageText_Initialized" Grid.Column="1" FontSize="50"/>
+        <TextBox x:Name="inputBox" HorizontalAlignment="Left" Height="64" Margin="376,454,0,0" Text="Bauteil" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Initialized="inputBox_Initialized" Grid.Column="1" FontSize="36" IsEnabled="False" TextAlignment="Center"/>
+        <Button Content="Bestätigen" HorizontalAlignment="Left" Margin="403,593,0,0" VerticalAlignment="Top" Click="sendButton_Click" Grid.Column="1" Width="256" Height="105" FontSize="30"/>
+        <Expander x:Name="connectionBox" Grid.Column="1" Header="Verbunden / Nicht Verbunden" HorizontalAlignment="Left" Height="392" Margin="10,10,0,0" VerticalAlignment="Top" Width="932" FontSize="30" Initialized="connectionBox_Initialized">
+            <Grid Background="#FFE5E5E5" Margin="0,0,0,-44">
+                <TextBox x:Name="ipBox" Margin="39,86,62,246" />
+                <Label Content="IP Adresse" HorizontalAlignment="Left" Height="60" Margin="39,28,0,0" VerticalAlignment="Top" Width="272"/>
+                <TextBox x:Name="portBox" Margin="39,206,62,122" />
+                <Label Content="Port Nummer" HorizontalAlignment="Left" Height="60" Margin="39,151,0,0" VerticalAlignment="Top" Width="272"/>
+                <Button x:Name="connectionButton" Content="Verbinden" HorizontalAlignment="Left" Margin="41,296,0,0" VerticalAlignment="Top" Height="78" Width="194" FontSize="30" Click="connectionButton_Click"/>
+            </Grid>
+        </Expander>
+        <Button Content="Voheriges" Grid.Column="1" HorizontalAlignment="Left" Height="94" Margin="166,453,0,0" VerticalAlignment="Top" Width="154" Click="Button_Click_1" FontSize="30"/>
+        <Button Content="Nächstes" Grid.Column="1" HorizontalAlignment="Left" Height="94" Margin="735,453,0,0" VerticalAlignment="Top" Width="155" Click="Button_Click" FontSize="30"/>
+
     </Grid>
 
 </Window>
